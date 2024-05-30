@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>zeyad mahmoud</title>
 </head>
+
 <body>
     <!-- start the header -->
     <header>
@@ -19,10 +22,17 @@
                     <li class="headOnMobile"><a href="#">About</a></li>
                     <li class="headOnMobile"><a href="#">skills</a></li>
                     <li class="headOnMobile"><a href="#">Contact Us</a></li>
-                    <li id="icon_menu_show" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                    <li id="icon_menu_show" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                            </svg></a></li>
                 </ul>
                 <ul class="sidebar">
-                    <li onclick="headSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li onclick="headSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                                viewBox="0 -960 960 960" width="30px" fill="#5f6368">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg></a></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">skills</a></li>
@@ -32,6 +42,28 @@
         </div>
     </header>
     <!-- end the header -->
+    <!-- start the main -->
+    <main>
+        <section id="home">
+            <div class="home">
+                <div id="home_image">
+                    <img src="image/ToMe.png" alt="zeyad">
+                </div>
+                <div id="home_name">
+                    <h1 id="myName">Zeyad mahmoud</h1>
+                    <p>Web developer</p>
+                </div>
+                
+            </div>
+            <div class="show">
+                <a href="#about"><p><span><i class="fa-solid fa-arrow-down"></i></span></p></a>
+            </div>
+        </section>
+        <section id="about"></section>
+        <section id="skills"></section>
+        <section id="contactUs"></section>
+    </main>
+    <!-- end the main -->
 
 
 
@@ -44,4 +76,5 @@
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
