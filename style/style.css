@@ -215,10 +215,10 @@ ul.sidebar li{
     }
 }
 @media (max-width: 450px){
-    /* ul.sidebar{
+    ul.sidebar{
         width: 100%;
-    } */
-    /* .show {
+    } 
+    .show {
         margin-top: 40px;
-    } */
+    }
 }
