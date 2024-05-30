@@ -2,6 +2,7 @@
     --bgl : rgb(255, 255, 255);
     /* --bgd : rgba(0, 0, 0, 0.829); */
     --bgd :#111F4D;
+    --sidebg: #111f4d93;
     --coll: rgb(0, 0, 0);
     --cold: rgb(255, 255, 255);
     --hoverColor: rgb(8, 178, 230);
@@ -70,10 +71,10 @@ ul.sidebar{
     height: 100vh;
     min-width: 250px;
     z-index: 999;
-    background-color: var(--bgd);
+    background-color: var(--sidebg);
     flex-direction: column;
     justify-content:flex-start;
-    align-items: flex-start;
+    align-items: center;
     display: none;
 }
 ul.sidebar li{
@@ -86,10 +87,21 @@ ul.sidebar li{
     justify-content: space-around;
     align-items: center;
 }
-#home_name{
+#home_name h1{
+    margin-top: 20px;
     font-size: var(--big_font);
+    text-transform: capitalize;
     font-weight: 700;
-    /* color: var(--cold); */
+    color: #111F4D;
+    text-shadow: var(--bgl) 10px -4px 20px,
+                var(--coll) -5px 4px 18px;
+    line-height: 1.6;
+}
+#home_name p{
+    letter-spacing: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
     color: #111F4D;
     text-shadow: var(--bgl) 10px -4px 20px,
                 var(--coll) -5px 4px 18px;
@@ -144,5 +156,8 @@ ul.sidebar li{
 @media (max-width: 450px){
     ul.sidebar{
         width: 100%;
+    }
+    .show {
+        margin-top: 40px;
     }
 }
