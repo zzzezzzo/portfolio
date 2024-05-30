@@ -16,14 +16,14 @@
 <body>
     <!-- start the header -->
     <header>
-        <div class="container">
+        <div id="container">
             <div class="logo">
                 <img src="image/logo-remove.png" alt="logo">
             </div>
             <div class="menu">
                 <ul class="head">
-                    <li class="headOnMobile"><a href="#">Home</a></li>
-                    <li class="headOnMobile"><a href="#">About</a></li>
+                    <li class="headOnMobile"><a href="#home">Home</a></li>
+                    <li class="headOnMobile"><a href="#about">About</a></li>
                     <li class="headOnMobile"><a href="#">skills</a></li>
                     <li class="headOnMobile"><a href="#">Contact Us</a></li>
                     <li id="icon_menu_show" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +37,8 @@
                                 <path
                                     d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                             </svg></a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">skills</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
@@ -65,7 +65,33 @@
                 </a>
             </div>
         </section>
-        <section id="about"></section>
+        <section id="about">
+            <div class="about_title">
+                <h1>About me</h1>
+            </div>
+            <div class="about">
+                <div class="about_image">
+                    <img class="image_move_about" src="image/about.jpg"  alt="zeyad">
+                </div>
+                <div class="about_text">
+                    <!-- <h1 >Zeyad mahmoud</h1> -->
+                    <p >I am a junior full stack developer. In this role, I am responsible for building and maintaining web applications, working on both the 
+                        front-end and back-end components. I have experience with various programming languages and frameworks, allowing me to 
+                        contribute to all aspects of the development lifecycle.
+                    </p>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/zeyad-abo-al-soud-327aa5273" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/zzzezzzo" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100084967849075&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/zeyadmahmoud576?igsh=MTE4dGRlN2poOGc0dg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="tel:+201205179358" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <div class="my_cv">
+                        <a href="image/cv.pdf" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="skills"></section>
         <section id="contactUs"></section>
     </main>
@@ -91,7 +117,9 @@
         });
 
         ScrollReveal().reveal('.image_move', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.image_move_about', { delay: 300, origin: 'left' });
         ScrollReveal().reveal('.text-move', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.about_text', { delay: 500, origin: 'right' });
     </script>
 </body>
 
