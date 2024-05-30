@@ -16,11 +16,10 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    overflow: auto;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 header #container{
-    /* width: 100%; */
+    width: 100%;
     background-color: var(--bgd);
     color: var(--bgl);
     padding: 10px 20px;
@@ -151,7 +150,7 @@ ul.sidebar li{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    border:#057ad3 2px solid ;
+    overflow-x: auto ;
 }
 .about_image img{
     width: 300px;
@@ -191,6 +190,9 @@ ul.sidebar li{
     color: #63E6BE;
 }
 @media (max-width: 710px){
+    body{
+        overflow-x: hidden;
+    }
     .headOnMobile{
         display: none;
     }
@@ -213,10 +215,10 @@ ul.sidebar li{
     }
 }
 @media (max-width: 450px){
-    ul.sidebar{
+    /* ul.sidebar{
         width: 100%;
-    }
-    .show {
+    } */
+    /* .show {
         margin-top: 40px;
-    }
+    } */
 }
