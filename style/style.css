@@ -1,0 +1,91 @@
+:root{
+    --bgl : rgb(255, 255, 255);
+    --bgd : rgba(0, 0, 0, 0.829);
+    --coll: rgb(0, 0, 0);
+    --cold: rgb(255, 255, 255);
+    --hoverColor: rgb(8, 178, 230);
+    --head_font_size: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header .container{
+    /* width: 100%; */
+    background-color: var(--bgd);
+    color: var(--bgl);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    width: 100px;
+}
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul li a:last-child{
+    margin: 40px;
+}
+.menu ul li a{
+    color: var(--cold);
+    font-size: var(--head_font_size);
+    text-transform: capitalize;
+    position: relative;
+}
+.menu ul li a::before{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--hoverColor);
+    position: absolute;
+    bottom: -10px;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+}
+.menu ul li a:hover::before ,
+.menu ul li a:hover {
+    width: 100%;
+    color: var(--hoverColor);
+    text-shadow: var(--hoverColor) 10px -4px 20px,
+                var(--cold) -5px 4px 18px;
+}
+#icon_menu_show{
+    display: none;
+}
+ul.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 250px;
+    z-index: 999;
+    background-color: var(--bgd);
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    display: none;
+}
+ul.sidebar li{
+    padding: 20px 2px;
+}
+@media (max-width: 710px){
+    .headOnMobile{
+        display: none;
+    }
+    #icon_menu_show{
+        display: block;
+    }
+}
+@media (max-width: 450px){
+    ul.sidebar{
+        width: 100%;
+    }
+}
