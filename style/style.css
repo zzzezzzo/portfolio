@@ -165,7 +165,7 @@ ul.sidebar li {
     font-weight: 700;
     text-align: center;
     color: #111f4d13;
-    margin: 110px 0;
+    margin: 110px 0 90px 0;
 }
 
 .about {
@@ -225,7 +225,19 @@ ul.sidebar li {
     margin-top: 30px;
 }
 .my_cv a {
+    color: var(--cold);
+    background-color:var(--bgd);
+    padding: 5px 30px;
+    border-radius: 10px;
+    outline: none;
+}
+.my_cv a:hover{
+    background-color: var(--cold);
     color: var(--bgd);
+    border: var(--bgd) 2px solid;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    
 }
 @media (max-width: 710px) {
     .headOnMobile {
