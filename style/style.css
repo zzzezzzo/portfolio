@@ -245,7 +245,7 @@ ul.sidebar li {
     flex-wrap: wrap;
     
 }
-.skills_title{
+.skills_title, .project_title{
     font-size: 80px;
     text-transform: uppercase;
     font-weight: 700;
@@ -253,7 +253,7 @@ ul.sidebar li {
     color: #111f4d13;
     margin: 110px 0 90px 0;
 }
-.card2{
+.card2 , .card1{
     position: relative;
     width: 250px;
     min-height: 300px;
@@ -261,6 +261,11 @@ ul.sidebar li {
     place-items: center;
     border-radius: 10px;
     margin: 3px;
+}
+.card1{
+    background: var(--cold);
+    width: 290px;
+    height: 390px;
 }
 .card2{
     overflow: hidden;
@@ -283,7 +288,7 @@ ul.sidebar li {
         transform: rotate(360deg)
     }
 }
-.card2::after{
+.card2::after {
     position: absolute;
     content: "";
     inset: 5px;
@@ -299,17 +304,74 @@ ul.sidebar li {
     height: 120px;
     border-radius: 10px;
 }
-.text h1{
+.text h1 , .project_text h1{
     color:var(--bgd);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: var(--big_font);
+    /* font-size: var(--big_font); */
+    font-size: 30px;
 }
-.text p{
+.text p , .project_text p{
     color: var(--bgd);
     font-size: var(--small_font);
     margin: 20px 0;
     text-transform: capitalize;
+}
+.switcher{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.switcher li{
+    margin: auto;
+    border: var(--bgd) 2px solid;
+    border-radius: 10px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 5px 0; 
+}
+.card1{
+    margin: 80px 30px;
+}
+.card1::before{
+    position: absolute;
+    content: "";
+    width: 305px;
+    height: 405px;
+    background: tomato;
+    z-index: -1;
+    border-radius: 10px;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    50%{
+        filter: hue-rotate(350deg);
+    }
+}
+.project{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.active{
+    background-color: var(--bgd);
+    color: var(--cold);
+    padding: 15px;
+    width: calc(60%/5);
+    transition: all 0.5s ease;
+    text-align: center;
+}
+.project_image img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: var(--bgl) 10px -4px 20px,
+        var(--coll) -5px 4px 18px;
 }
 @media (max-width: 710px) {
     .headOnMobile {
@@ -330,7 +392,7 @@ ul.sidebar li {
         height: 400px;
     }
 
-    .about_title, .skills_title {
+    .about_title, .skills_title, .project_title {
         font-size: var(--big_font);
     }
 
