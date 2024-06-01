@@ -23,9 +23,10 @@ switchers.forEach((li) =>{
 
 function mangementElement(){
     cards.forEach((card) =>{
+        card.style.opacity = 1;
         card.style.display = 'none';
     })
     document.querySelectorAll(this.dataset.category).forEach((el) => {
-        el.style.display = 'block';
+        el.style.display = 'grid';
     })
 }
