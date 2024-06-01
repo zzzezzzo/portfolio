@@ -223,14 +223,18 @@ ul.sidebar li {
 .my_cv {
     margin-top: 30px;
 }
-.my_cv a {
+.my_cv a ,.submit{
     color: var(--cold);
     background-color:var(--bgd);
     padding: 5px 30px;
     border-radius: 10px;
     outline: none;
 }
-.my_cv a:hover{
+.submit{
+    font-size: var(--small_font);
+    text-transform: capitalize;
+}
+.my_cv a:hover , .submit:hover{
     background-color: var(--cold);
     color: var(--bgd);
     border: var(--bgd) 2px solid;
@@ -244,7 +248,7 @@ ul.sidebar li {
     flex-wrap: wrap;
     
 }
-.skills_title, .project_title{
+.skills_title, .project_title , .contact_title{
     font-size: 80px;
     text-transform: uppercase;
     font-weight: 700;
@@ -347,15 +351,16 @@ ul.sidebar li {
 }
 .card1{
     margin: 80px 30px;
-    animation: opacity 1s ease-in;
+    animation: fadein 1s ease-in;
 }
-@keyframes opacity {
+@keyframes fadein {
     0%{
-        opacity: 0.5;
-        transform: scale(0.1);
+        opacity: 0;
+        transform: scale(0);
     }
     100%{
         opacity: 1;
+        transform: scale(1);
     }
 }
 .project{
@@ -380,6 +385,38 @@ ul.sidebar li {
     box-shadow: var(--bgl) 10px -4px 20px,
         var(--coll) -5px 4px 18px;
 }
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    overflow-x: auto;
+}
+.contact_image img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: var(--bgl) 10px -4px 20px,
+                var(--coll) -5px 4px 18px;
+}
+.contact_text{
+    width: 400px;
+    color: var(--bgd);
+    font-size: var(--small_font);
+}
+.contact_form input{
+    display: block;
+    margin: 10px 0;
+    width: 250px;
+    padding: 10px;
+    border: var(--bgd) 2px solid;
+}
+textarea{
+    width: 250px;
+    border: var(--bgd) 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
 @media (max-width: 710px) {
     .headOnMobile {
         display: none;
@@ -399,12 +436,15 @@ ul.sidebar li {
         height: 400px;
     }
 
-    .about_title, .skills_title, .project_title {
+    .about_title, .skills_title, .project_title ,.contact_title{
         font-size: var(--big_font);
     }
 
     .about {
         text-align: center;
+        height: 100vh;
+        overflow: hidden;
+
         
     }
     #Skills {
@@ -415,6 +455,16 @@ ul.sidebar li {
 @media (max-width: 450px) {
     ul.sidebar {
         width: 100%;
+    }
+    .contact_image img ,.contact_text h1{
+        display: none;
+    }
+    .contact{
+        width: 100%;
+        text-align: center;
+    }
+    .contact_form input{
+        margin: 10px auto;
     }
 
     .show {
